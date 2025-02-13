@@ -17,6 +17,10 @@ import cloudinary.uploader
 import cloudinary.api
 import cloudinary_storage
 
+from decouple import config
+from pathlib import Path
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -50,6 +54,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'cloudinary',
     'cloudinary_storage',
+    'mpesa_stk',
 ]
 
 
@@ -197,3 +202,9 @@ cloudinary.config(
 # CLOUDINARY_URL= 'cloudinary://197752428554159:yh_GicwItmkHqYMzYObe3YeSUY4@cloud_for_use'
 # MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+MPESA_CONSUMER_KEY = config('MPESA_CONSUMER_KEY')
+MPESA_CONSUMER_SECRET = config('MPESA_CONSUMER_SECRET')
+MPESA_SHORTCODE = config('MPESA_SHORTCODE')
+MPESA_PASSKEY = config('MPESA_PASSKEY')
