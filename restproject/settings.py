@@ -93,16 +93,20 @@ WSGI_APPLICATION = 'restproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rest_db2',
-        'USER': 'viewer',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT':'5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'rest_db2',
+#         'USER': 'viewer',
+#         'PASSWORD': '123456',
+#         'HOST': 'localhost',
+#         'PORT':'5432',
+#     }
+# }
+
+DATABASES={
+    'default':dj_database_url.parse("postgresql://usecase_ciuw_user:WyBMdjszYWs3St1RkjUXYRnwStlmft2E@dpg-cvanodtrie7s7396slm0-a.oregon-postgres.render.com/usecase_ciuw")
+} 
 
 
 # Password validation
