@@ -154,6 +154,7 @@ AUTH_USER_MODEL = 'api.User'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173", 
+    "https://restaurant-booking-system-frontend.vercel.app/",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False 
